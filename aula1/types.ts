@@ -11,5 +11,3 @@ const user: User = {
 };
 
 console.log(user.name, user.email);
-
-function AuthenticateUser(user: User): String;
