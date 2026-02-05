@@ -1,10 +1,19 @@
-import { StrictMode } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import Card from "./components/Card";
+import Navbar from "./components/Navbar";
+import Contact from "./pages/Contact";
+import Example from "./pages/Example";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <Card />
-  </StrictMode>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/example" element={<Example />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>,
 );
