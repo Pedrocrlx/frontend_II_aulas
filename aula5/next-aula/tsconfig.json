@@ -11,6 +11,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "types": ["@testing-library/jest-dom", "jest"],
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
@@ -29,6 +30,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/components/__test__.js"  ],
   "exclude": ["node_modules"]
 }
