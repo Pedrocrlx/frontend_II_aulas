@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-// Exporta uma função que cria uma nova store em cada chamada
 export const makeStore = () => {
   return configureStore({
     reducer: {

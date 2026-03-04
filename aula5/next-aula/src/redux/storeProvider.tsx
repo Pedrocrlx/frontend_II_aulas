@@ -6,7 +6,6 @@ import { makeStore, AppStore } from './store'
 export default function StoreProvider({ children }: { children: React.ReactNode }) {
   const storeRef = useRef<AppStore>(undefined)
   if (!storeRef.current) {
-    // Cria a store na primeira renderização
     storeRef.current = makeStore()
   }
 

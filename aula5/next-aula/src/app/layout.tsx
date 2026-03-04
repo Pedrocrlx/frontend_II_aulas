@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StoreProvider from "@/redux/storeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const monteSerrat = Montserrat({ 
+  variable: "--font-monteserrat",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${monteSerrat.variable}`}
       >
         <main>
           <StoreProvider>
