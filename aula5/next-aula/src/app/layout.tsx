@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StoreProvider from "@/redux/storeProvider";
+import QueryProvider from "@/providers/QueryProvider";
 
 const monteSerrat = Montserrat({ 
   variable: "--font-monteserrat",
@@ -24,10 +25,12 @@ export default function RootLayout({
         className={`${monteSerrat.variable}`}
       >
         <main>
-          <StoreProvider>
-            <Navbar />
-            {children}
-          </StoreProvider>
+          <QueryProvider>
+            <StoreProvider>
+              <Navbar />
+              {children}
+            </StoreProvider>
+          </QueryProvider>
         </main>
       </body>
     </html>
